@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quizz{% endblock %}
+
+{% block body %}
+<div class="full-page text-center">
+<h1>{% if quizz.idCategory == 1 %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 36 24">
+        <path id="Icon_material-computer" data-name="Icon material-computer" d="M30,27a3,3,0,0,0,2.985-3L33,9a3.009,3.009,0,0,0-3-3H6A3.009,3.009,0,0,0,3,9V24a3.009,3.009,0,0,0,3,3H0v3H36V27ZM6,9H30V24H6Z" transform="translate(0 -6)"/>
+    </svg>
+
+    {{quizz.name}}</h1>
+
+    {% endif %}
+</div>
+
+    <div class="container">
+
+        <div class="alert alert-dismissible alert-primary col-12 text-center">
+            <h1 class="ml11">
+  <span class="text-wrapper">
+    <span class="line line1"></span>
+    <span class="letters">Bienvenu sur ce quizz !</span>
+  </span>
+            </h1>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        </div>
+        <h2></h2>
+
+        <div class="game_quizz text-center">
+
+            <div class="form-group" id="app">
+                <label class="col-form-label" for="inputDefault"> Question {{ cmp }} : </label>
+                <p>{{ question }}</p>
+                <div class="col-12 mt-1">
+                    {{ form_start(form) }}
+                    {{ form_widget(form.searchbar, {'attr': {'placeholder' : "Votre réponse", 'class' : "form-control"}}) }}
+                    <button type="submit" class="btn btn-primary mt-5 mb-5" id="btn_quest">Soumettre votre réponse &#128522;</button>
+                    {{ form_end(form) }}
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 33 33">
+                            <g id="Icon_feather-help-circle" data-name="Icon feather-help-circle" transform="translate(-1.5 -1.5)">
+                                <path id="Tracé_1" data-name="Tracé 1" d="M33,18A15,15,0,1,1,18,3,15,15,0,0,1,33,18Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                <path id="Tracé_2" data-name="Tracé 2" d="M13.635,13.5A4.5,4.5,0,0,1,22.38,15c0,3-4.5,4.5-4.5,4.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                <path id="Tracé_3" data-name="Tracé 3" d="M18,25.5h0" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                            </g>
+                        </svg> Besoin d'aide ?
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Indice :</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+
+                                   <h2 id="indice">{{ indice }}  &#128521;</h2>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

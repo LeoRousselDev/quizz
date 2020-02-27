@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+    {% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="{{ path('index') }}">🌍 Quizz'R </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Catégories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="18" viewBox="0 0 28.8 33.121">
+                            <path id="Icon_map-pet-store" data-name="Icon map-pet-store" d="M18,15.461a4.322,4.322,0,0,1,4.193,3.218c.6,2.319.521,4.861,3.167,6.18,2.349.8,3.237,1.8,3.237,4.5a4.991,4.991,0,0,1-4.21,4.719A9.568,9.568,0,0,1,18,33a9.56,9.56,0,0,1-6.384,1.076A5,5,0,0,1,7.4,29.355c0-2.635.948-3.75,3.293-4.514,2.885-1.474,2.5-4.057,3.141-6.276A4.327,4.327,0,0,1,18,15.461Zm13.217-1.6c-.715-.621-3.633,1.8-4.551,3a3.788,3.788,0,0,0-.905,2.49,3.346,3.346,0,0,0,3.115,3.534,3.144,3.144,0,0,0,2.889-2.2C32.665,18.36,32.715,15.16,31.217,13.859Zm-26.436,0c-1.5,1.3-1.447,4.5-.546,6.826a3.143,3.143,0,0,0,2.888,2.2,3.345,3.345,0,0,0,3.115-3.534,3.787,3.787,0,0,0-.9-2.49C8.415,15.664,5.5,13.238,4.782,13.859ZM21.841,1.11c7.263,1.233,6.754,13.465.938,12.48a3.981,3.981,0,0,1-3.113-3.638C19.475,8.1,19.042.636,21.841,1.11Zm-7.682,0c2.8-.474,2.367,6.985,2.174,8.841a3.979,3.979,0,0,1-3.111,3.638C7.405,14.576,6.9,2.343,14.159,1.11Z" transform="translate(-3.6 -1.089)"/>
+                        </svg>
+
+                         Animaux</a>
+
+
+                    <a class="dropdown-item" href="#">                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="18" viewBox="0 0 33.75 27">
+                            <path id="Icon_awesome-car-alt" data-name="Icon awesome-car-alt" d="M30.843,14.929l-.79-1.976-1.4-3.5A7.837,7.837,0,0,0,21.34,4.5H12.41A7.837,7.837,0,0,0,5.1,9.45l-1.4,3.5-.79,1.976A4.49,4.49,0,0,0,0,19.125V22.5a4.463,4.463,0,0,0,1.125,2.948v3.8a2.25,2.25,0,0,0,2.25,2.25h2.25a2.25,2.25,0,0,0,2.25-2.25V27h18v2.25a2.25,2.25,0,0,0,2.25,2.25h2.25a2.25,2.25,0,0,0,2.25-2.25v-3.8A4.461,4.461,0,0,0,33.75,22.5V19.125A4.49,4.49,0,0,0,30.843,14.929ZM9.276,11.121A3.375,3.375,0,0,1,12.41,9h8.93a3.375,3.375,0,0,1,3.134,2.121l1.4,3.5h-18l1.4-3.5ZM5.625,22.486a2.122,2.122,0,0,1-2.25-2.243A2.122,2.122,0,0,1,5.625,18C6.975,18,9,20.019,9,21.364S6.975,22.486,5.625,22.486Zm22.5,0c-1.35,0-3.375.224-3.375-1.121S26.775,18,28.125,18a2.122,2.122,0,0,1,2.25,2.243,2.122,2.122,0,0,1-2.25,2.243Z" transform="translate(0 -4.5)"/>
+                        </svg> Voitures</a>
+                    <a class="dropdown-item" href="{{ path('informatique') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="18" viewBox="0 0 36 24">
+                            <path id="Icon_material-computer" data-name="Icon material-computer" d="M30,27a3,3,0,0,0,2.985-3L33,9a3.009,3.009,0,0,0-3-3H6A3.009,3.009,0,0,0,3,9V24a3.009,3.009,0,0,0,3,3H0v3H36V27ZM6,9H30V24H6Z" transform="translate(0 -6)"/>
+                        </svg>
+
+                         Informatique</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('about') }}">A propos</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <a href="{{ path('quizz_new') }}" id="btn_quizz" class="btn btn-secondary my-2 my-sm-0" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 29.25 29.25">
+                    <g id="Icon_ionic-md-add-circle-outline" data-name="Icon ionic-md-add-circle-outline" transform="translate(-3.375 -3.375)">
+                        <path id="Tracé_4" data-name="Tracé 4" d="M25.523,19.477H19.477v6.047H16.523V19.477H10.477V16.523h6.047V10.477h2.953v6.047h6.047Z"/>
+                        <path id="Tracé_5" data-name="Tracé 5" d="M18,6.328A11.667,11.667,0,1,1,9.745,9.745,11.623,11.623,0,0,1,18,6.328m0-2.953A14.625,14.625,0,1,0,32.625,18,14.623,14.623,0,0,0,18,3.375Z"/>
+                    </g>
+                </svg>
+                Créer un quizz</a>
+        </form>
+    </div>
+</nav>
+{% block body %}
+
+
+
+{% endblock %}
+<footer class="text-center">
+
+    <p>Développer pour le rendez-vous du 26 février.</p>
+
+</footer>
+{% block javascripts %}
+    <script src="{{ asset('build/app.js') }}"></script>
+    <script src="{{ asset('js/timer.js') }}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+{% endblock %}
+</body>
 </html>

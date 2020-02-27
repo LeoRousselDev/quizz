@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quizz{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h2>Récap du quizz !</h2>
+
+        <div class="game_quizz text-center">
+
+
+
+            <h1>Votre score :</h1>
+            <h2 class="font-weight-bold">{{ reussit }}/5</h2>
+
+
+            {% if reussit == 0 %}
+                <div class="progress text-center">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 1%"></div>
+                </div>
+            {% endif %}
+
+            {% if reussit == 1 %}
+                <div class="progress text-center">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%"></div>
+                </div>
+            {% endif %}
+
+            {% if reussit == 2 %}
+                <div class="progress text-center">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%"></div>
+                </div>
+            {% endif %}
+
+            {% if reussit == 3 %}
+                <div class="progress text-center">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%"></div>
+                </div>
+            {% endif %}
+
+            {% if reussit == 4 %}
+                <div class="progress text-center">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                </div>
+            {% endif %}
+
+            {% if reussit == 5 %}
+                <div class="progress text-center">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>
+            {% endif %}
+
+            {% if reussit < 3 %}
+            <p class="aff text-danger">Vous êtes débutant &#128517;</p>
+            {% else %}
+            <p class="aff text-success">Vous êtes incolable ! &#128077;</p>
+            {% endif %}
+
+
+            <a href="{{ path('informatique') }}" class="btn btn-primary mb-5">Retourner à la liste des quizz informatique</a>
+        </div>
+
+        <div class="also_category text-center">
+            <h3 class="font-weight-bold">Dans la même thématique : </h3>
+            <div class="card-columns">
+
+            {% for quizz in quizzs|slice (1, 5) %}
+                {% if quizz.idCategory == 1 %}
+                    <div class="card text-center">
+                        <div class="pic mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+                                <path id="Icon_material-computer" data-name="Icon material-computer" d="M30,27a3,3,0,0,0,2.985-3L33,9a3.009,3.009,0,0,0-3-3H6A3.009,3.009,0,0,0,3,9V24a3.009,3.009,0,0,0,3,3H0v3H36V27ZM6,9H30V24H6Z" transform="translate(0 -6)"/>
+                            </svg>
+                        </div>
+
+                        <div class="card-body">
+                            <h2 class="card-title">{{quizz.name}}</h2>
+                        </div>
+                        <div class="text-center">
+                            <a href="{{ path('quizz_show', {'id': quizz.id,'cmp': 1}) }}" class="btn btn-warning mb-3">Faire ce quizz</a>
+                        </div>
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+                </div>
+            <div class="text-center">
+
+                <a href="{{ path('informatique') }}" class="btn btn-primary mb-5">Voir plus</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

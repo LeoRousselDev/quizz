@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quizz index{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h1 class="mt-2">Nos quizz's</h1>
+
+
+        <div class="card-columns">
+            {% for quizz in quizzs %}
+                    <div class="card">
+
+                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{quizz.name}}</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                        <div class="text-center">
+                            <a href="{{ path('quizz_show', {'id': quizz.id,'cmp': 1}) }}" >Faire ce quizz</a>
+                        </div>
+                    </div>
+            {% else %}
+                <tr>
+                    <td colspan="26">Il n'existe pas de quizz dans cette thématique</td>
+                </tr>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

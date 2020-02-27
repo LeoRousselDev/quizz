@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+* {
+    font-family: 'Oswald' ;
+}
+.game_quizz {
+    background-color: #f8f8f8 !important;
+    border-radius: 15px;
+    box-shadow: #222222;
+    color : black;
+}
+
+.col-form-label {
+    color : #2196F3 !important;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.bounce-enter-active {
+    animation: bounce-in .5s;
+}
+.bounce-leave-active {
+    animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.card {
+    border-radius: 15px !important;
+    box-shadow: none;
+    background-color: #f8f8f8 !important;
+}
+
+.also_category {
+    background-color: #f8f8f8 !important;
+    border-radius: 15px;
+    box-shadow: #222222;
+    color : black;
+    margin-top : 20px;
+}
+
+.navbar {
+    font-size: 1.8em;
+}
+
+.full-page {
+    background-color: #f8f8f8 !important;
+
+}
+
+p {
+    color : black !important;
+}
+
+.ml11 {
+    font-weight: 700;
+    font-size: 3.5em;
+}
+
+.ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+}
+
+.ml11 .line1 {
+    top: 0;
+    left: 0;
+}
+
+.ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+
+h
+
+
+.ball {
+    margin-top: 50px;
+    margin-left: -200px;
+    width: 120px;
+    height: 40px;
+    background-color: #EDE053;
+    border-radius: 20px;
+    transition: 1s;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+
+.aff
+{
+    font-size: 2em;
+}
+
+
+
+.ml1 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+.ml1 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.ml1 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+}
+
+.ml1 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 0 0;
+}
+
+.ml1 .line1 { top: 0; }
+.ml1 .line2 { bottom: 0; }
+
+
+
+#indice {
+    filter: blur(2px);
+    opacity: 0.5;
+}
+
+#indice:hover {
+    filter: blur(0px);
+    opacity: 10;
+}

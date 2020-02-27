@@ -1,0 +1,16 @@
+* {
+    font-family: Arial;
+    color : white !important;
+}
+.game_quizz {
+    background-color: #f8f8f8 !important;
+    border-radius: 15px;
+    box-shadow: #222222;
+    color : black;
+}
+
+.col-form-label {
+    color : #2196F3 !important;
+    font-weight: bold;
+    font-size: 2em;
+}

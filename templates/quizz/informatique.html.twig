@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quizz index{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1 class="mt-2">Les quizz's informatique</h1>
+
+
+        <div class="card-columns">
+            {% for quizz in quizzs %}
+            {% if quizz.idCategory == 1 %}
+            <div class="card text-center">
+                <div class="pic mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24">
+                    <path id="Icon_material-computer" data-name="Icon material-computer" d="M30,27a3,3,0,0,0,2.985-3L33,9a3.009,3.009,0,0,0-3-3H6A3.009,3.009,0,0,0,3,9V24a3.009,3.009,0,0,0,3,3H0v3H36V27ZM6,9H30V24H6Z" transform="translate(0 -6)"/>
+                </svg>
+                </div>
+
+                <div class="card-body">
+                        <h2 class="card-title">{{quizz.name}}</h2>
+                    </div>
+                <div class="text-center">
+                <a href="{{ path('quizz_show', {'id': quizz.id,'cmp': 1}) }}" class="btn btn-primary mb-3">Faire ce quizz</a>
+            </div>
+            </div>
+            {% endif %}
+            {% else %}
+                <tr>
+                    <td colspan="26">Il n'existe pas de quizz dans cette thématique</td>
+                </tr>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}
