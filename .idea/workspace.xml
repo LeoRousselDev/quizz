@@ -148,6 +148,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -161,6 +162,10 @@
       <updated>1582649233613</updated>
       <workItem from="1582649235382" duration="10678000" />
       <workItem from="1582702548169" duration="10118000" />
+      <workItem from="1582804757198" duration="599000" />
+      <workItem from="1582882459379" duration="14000" />
+      <workItem from="1583137664528" duration="730000" />
+      <workItem from="1583923905209" duration="42000" />
     </task>
     <servers />
   </component>
@@ -172,9 +177,23 @@
       <screen x="1920" y="30" width="1920" height="1050" />
     </state>
     <state x="2664" y="271" key="#com.intellij.ide.util.MemberChooser/0.30.1536.834/1920.30.1920.1050@1920.30.1920.1050" timestamp="1582704830547" />
-    <state x="444" y="271" key="com.intellij.ide.util.TipDialog" timestamp="1582702553224">
-      <screen x="0" y="30" width="1536" height="834" />
+    <state x="2660" y="310" key="FileChooserDialogImpl" timestamp="1583138694008">
+      <screen x="1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="2660" y="310" key="FileChooserDialogImpl/0.30.1536.834/1920.30.1920.1050@1920.30.1920.1050" timestamp="1583138694008" />
+    <state x="2715" y="474" key="NewPhpFileDialog" timestamp="1583923921003">
+      <screen x="1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="2715" y="474" key="NewPhpFileDialog/0.30.1536.834/1920.30.1920.1050@1920.30.1920.1050" timestamp="1583923921003" />
+    <state x="2381" y="197" key="SettingsEditor" timestamp="1583138688963">
+      <screen x="1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="2381" y="197" key="SettingsEditor/0.30.1536.834/1920.30.1920.1050@1920.30.1920.1050" timestamp="1583138688963" />
+    <state x="2475" y="333" key="com.intellij.ide.util.TipDialog" timestamp="1583137764569">
+      <screen x="1920" y="30" width="1920" height="1050" />
     </state>
     <state x="444" y="271" key="com.intellij.ide.util.TipDialog/0.30.1536.834/1920.30.1920.1050@0.30.1536.834" timestamp="1582702553224" />
+    <state x="2475" y="333" key="com.intellij.ide.util.TipDialog/0.30.1536.834/1920.30.1920.1050@1920.30.1920.1050" timestamp="1583137764569" />
+    <state x="444" y="271" key="com.intellij.ide.util.TipDialog/0.30.1536.834@0.30.1536.834" timestamp="1582882469374" />
   </component>
 </project>
