@@ -1,4 +1,85 @@
-{{ form_start(form) }}
+{# {{ form_start(form) }}
     {{ form_widget(form) }}
+{{ form_end(form) }}
+
+#}
+
+{{ form_start(form) }}
+
+<div class="row">
+    <div class="col">
+        {{ form_row(form.id_category, { 'label': '1 = ..' }) }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        {{ form_row(form.name) }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        {{ form_row(form.q1) }}
+    </div>
+    <div class="col" id="some-custom-id">
+        {{ form_row(form.r1) }}
+    </div>
+    <div class="col" id="some-custom-id">
+        {{ form_row(form.indiceq1) }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        {{ form_row(form.q2) }}
+    </div>
+    <div class="col" id="some-custom-id">
+        {{ form_row(form.r2) }}
+    </div>
+        <div class="col" id="some-custom-id">
+        {{ form_row(form.indiceq2) }}
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        {{ form_row(form.q3) }}
+    </div>
+    <div class="col" id="some-custom-id">
+        {{ form_row(form.r3) }}
+    </div>
+        <div class="col" id="some-custom-id">
+        {{ form_row(form.indiceq3) }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        {{ form_row(form.q4) }}
+    </div>
+    <div class="col" id="some-custom-id">
+        {{ form_row(form.r4) }}
+    </div>
+        <div class="col" id="some-custom-id">
+        {{ form_row(form.indiceq4) }}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        {{ form_row(form.q5) }}
+    </div>
+    <div class="col" id="some-custom-id">
+        {{ form_row(form.r5) }}
+    </div>
+        <div class="col" id="some-custom-id">
+        {{ form_row(form.indiceq5) }}
+    </div>
+</div>
+
     <button class="btn">{{ button_label|default('Ajouter mon quizz') }}</button>
+
+
 {{ form_end(form) }}

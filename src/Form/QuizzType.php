@@ -17,11 +17,7 @@ class QuizzType extends AbstractType
                 'attr' => array(
                     'placeholder' => 'Nom',
                     'class' => 'form-control')))
-            ->add('id_user', null, array(
-                'label' => 'ID user',
-                'attr' => array(
-                    'placeholder' => 'id',
-                    'class' => 'form-control')))
+           
             ->add('q1', null, array(
                 'label' => 'Question n*1',
                 'attr' => array(
